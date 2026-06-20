@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prescription Data Ingest"
+  short_description: "Manually structure prescriptions locally"
+  default_prompt: "Use $prescription-data-ingest to group prescription photos or PDFs into one encounter, detect duplicate source hashes/manifests before creating a new encounter, manually extract medications and clinical instructions, write JSON sidecars, and import reviewed data into SQLite."

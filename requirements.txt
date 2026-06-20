@@ -1,0 +1,6 @@
+# Lab ingestion
+pdfplumber
+pypdf
+openpyxl
+PyYAML
+

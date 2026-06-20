@@ -1,0 +1,4 @@
+interface:
+  display_name: "Imaging Data Ingest"
+  short_description: "Manually structure imaging and procedure records locally"
+  default_prompt: "Use $imaging-data-ingest to group imaging or procedure files into one study, detect duplicate source hashes/manifests before creating a new study, manually extract modality, body part, laterality, findings, impression, procedure details, injected medicines, and recommendations, write JSON sidecars, and import reviewed data into SQLite."

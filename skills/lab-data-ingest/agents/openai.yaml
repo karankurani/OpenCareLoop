@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lab Data Ingest"
+  short_description: "Manually extract lab reports into JSON and SQLite"
+  default_prompt: "Use $lab-data-ingest to extract each lab report page's text, manually review it page by page, try other local views when needed, write JSON sidecars, and load reviewed results into SQLite."

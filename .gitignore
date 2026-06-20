@@ -1,0 +1,36 @@
+# macOS / editor noise
+.DS_Store
+__MACOSX/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Unprocessed intake dumps stay local until files are sorted.
+raw-data-dump/
+people/*/raw-data-dump/
+
+# Processed/sorted medical records, lab sidecars, and SQLite databases are intentionally trackable.
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal

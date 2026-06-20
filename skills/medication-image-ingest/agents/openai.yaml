@@ -1,0 +1,4 @@
+interface:
+  display_name: "Medication Image Ingest"
+  short_description: "Manually structure medicine package images"
+  default_prompt: "Use $medication-image-ingest to ingest medicine package, blister, bottle, or label photos for one person, verify the exact product variant and composition online, cross-check current records before asking the user, and write local structured evidence."
