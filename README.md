@@ -15,44 +15,35 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE).
 > engine, or treatment system. It does not replace a doctor, pharmacist, nurse,
 > qualified clinician, emergency department, poison-control service, or local
 > urgent-care pathway.
-
-> [!CAUTION]
 > Do not use this project for urgent or emergency situations. If a situation may
 > be urgent, stop using the normal workflow and seek appropriate medical help.
-
-> [!WARNING]
 > Do not use generated summaries, extracted record data, ranked possibilities,
 > or appointment questions as medical orders. Medication changes, dose changes,
 > stopping or starting medicines or supplements, procedure decisions, fasting,
 > pregnancy-related decisions, delaying care, or other risk-bearing changes
 > should be checked with a qualified clinician first.
-
-> [!WARNING]
 > Medical records can be incomplete, ambiguous, outdated, misread,
 > mistranscribed, or incorrectly linked to the wrong person. Treat all extracted
 > data and dossier summaries as review material until checked against the
 > original record and, when needed, confirmed by the patient or clinician.
-
-> [!CAUTION]
 > This repository may contain sensitive health information. Do not publish,
 > commit, upload, share, or send personal medical records, prescriptions, lab
 > reports, scans, IDs, or dossier files unless the affected person has approved
 > that disclosure and you understand the privacy consequences.
-
-> [!IMPORTANT]
 > OpenCareLoop does not by itself provide HIPAA, GDPR, clinical-safety,
 > security, audit, consent-management, or regulatory compliance. Anyone using or
 > modifying it is responsible for the laws, policies, and safeguards that apply
 > to their setting.
 
-## Core Care Loop
+## Getting Started
 
 ### 1. Open this folder with an AI agent
 
 Open this repository folder in Codex or an equivalent AI coding-agent
 environment that can read and write local files.
 
-This works with frontier models - GPT 5.5/equivalent and above.
+> [!IMPORTANT]
+> This works with frontier models - GPT 5.5/equivalent and above.
 
 Start by telling the agent the person's name and that you want to create or
 continue their OpenCareLoop dossier.
