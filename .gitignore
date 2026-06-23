@@ -21,6 +21,12 @@ dist/
 build/
 *.egg-info/
 
+# Docusaurus docs site
+.pnpm-store/
+docs-site/node_modules/
+docs-site/.docusaurus/
+docs-site/build/
+
 # Local environment / secrets
 .env
 .env.*
