@@ -30,6 +30,9 @@ Use this structure by default:
 ```text
 root-folder/
   AGENTS.md
+  CLAUDE.md
+  SETUP.md
+  START_HERE.md
   requirements.txt
   skills/
   people/
@@ -68,6 +71,12 @@ root-folder/
 - Keep shared skills and automations at the workspace root.
 - Put person-specific records, SQLite files, and dossier Markdown only inside
   that person's folder.
+- At the beginning of each session, read `SETUP.md`, check whether
+  `.venv/bin/python` exists, and set up the virtual environment from
+  `requirements.txt` if it is missing.
+- After the setup check, list existing folders under `people/` to identify
+  available person slugs before beginning the user's requested work. Do not
+  inspect raw medical records during this slug check.
 - Read this root file for common workflow and the relevant
   `people/<person-slug>/AGENTS.md` for case-specific context.
 - Default to readable lowercase person slugs.
