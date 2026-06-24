@@ -17,6 +17,10 @@ permissions:
 jobs:
   build-release:
     runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ github.event_name == 'workflow_dispatch' && inputs.version || github.ref_name }}
+      VERSIONED_ZIP: dist/opencareloop-${{ github.event_name == 'workflow_dispatch' && inputs.version || github.ref_name }}.zip
+      STABLE_ZIP: dist/OpenCareLoop.zip
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,18 +32,24 @@ jobs:
 
       - name: Build downloadable workspace
         run: |
-          VERSION="${{ github.event_name == 'workflow_dispatch' && inputs.version || github.ref_name }}"
           python scripts/build_release_zip.py "$VERSION"
+
+      - name: Prepare stable release asset
+        run: cp "$VERSIONED_ZIP" "$STABLE_ZIP"
 
       - name: Publish GitHub Release
         if: github.event_name == 'push'
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/opencareloop-${{ github.ref_name }}.zip
+          files: |
+            ${{ env.VERSIONED_ZIP }}
+            ${{ env.STABLE_ZIP }}
 
       - name: Upload workflow artifact
         if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
           name: opencareloop-${{ inputs.version }}
-          path: dist/opencareloop-${{ inputs.version }}.zip
+          path: |
+            ${{ env.VERSIONED_ZIP }}
+            ${{ env.STABLE_ZIP }}

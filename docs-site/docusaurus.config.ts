@@ -40,6 +40,11 @@ const config: Config = {
     ],
 
     themeConfig: {
+        colorMode: {
+            defaultMode: "light",
+            disableSwitch: true,
+            respectPrefersColorScheme: false,
+        },
         navbar: {
             title: "OpenCareLoop",
             items: [
@@ -56,41 +61,8 @@ const config: Config = {
                 },
             ],
         },
-        footer: {
-            style: "light",
-            links: [
-                {
-                    title: "Guide",
-                    items: [
-                        {
-                            label: "What OpenCareLoop is",
-                            to: "/docs/intro",
-                        },
-                        {
-                            label: "Set up your workspace",
-                            to: "/docs/setup",
-                        },
-                        {
-                            label: "Start your first dossier",
-                            to: "/docs/getting-started",
-                        },
-                    ],
-                },
-                {
-                    title: "Project",
-                    items: [
-                        {
-                            label: "GitHub",
-                            href: "https://github.com/karankurani/OpenCareLoop",
-                        },
-                    ],
-                },
-            ],
-            copyright: `Copyright ${new Date().getFullYear()} OpenCareLoop contributors.`,
-        },
         prism: {
             theme: prismThemes.github,
-            darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,
 };
