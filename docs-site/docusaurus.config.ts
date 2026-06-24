@@ -4,7 +4,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 const config: Config = {
     title: "OpenCareLoop",
-    tagline: "The AI agent that helps you with your health your entire lifetime.",
+    tagline: "Solve your family's health, one loop at a time.",
     url: "https://karankurani.github.io",
     baseUrl: "/OpenCareLoop/",
     organizationName: "karankurani",
