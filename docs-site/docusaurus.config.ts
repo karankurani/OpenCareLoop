@@ -63,12 +63,16 @@ const config: Config = {
                     title: "Guide",
                     items: [
                         {
-                            label: "Getting started",
-                            to: "/docs/getting-started",
+                            label: "What OpenCareLoop is",
+                            to: "/docs/intro",
                         },
                         {
-                            label: "Adding records",
-                            to: "/docs/adding-records",
+                            label: "Set up your workspace",
+                            to: "/docs/setup",
+                        },
+                        {
+                            label: "Start your first dossier",
+                            to: "/docs/getting-started",
                         },
                     ],
                 },

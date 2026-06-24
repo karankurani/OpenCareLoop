@@ -1,13 +1,14 @@
 ---
-title: Talking To The Agent
-description: Examples of useful prompts and answer styles.
+title: Work with the agent
+sidebar_label: Work with the agent
+description: Prompts that work, how to answer well, and why accuracy matters.
 ---
 
-# Talking To The Agent
+# Work with the agent
 
-OpenCareLoop works best when you ask for practical, specific work. Ask the agent to organize facts, identify missing information, update the timeline, or prepare questions.
+OpenCareLoop is at its best when you ask for specific, practical work: organize the facts, find what's missing, update the timeline, suggest one change, prepare questions.
 
-## Good prompts
+## Prompts that work
 
 Start a new dossier:
 
@@ -15,13 +16,13 @@ Start a new dossier:
 This is for Karan. Let's start a new OpenCareLoop dossier for him.
 ```
 
-Resume an existing dossier:
+Resume one:
 
 ```text
 This is for Karan. Please read his current dossier, summarize the status, and ask what changed.
 ```
 
-Add a new symptom update:
+Report a change:
 
 ```text
 Karan's knee pain improved from 7/10 to 3/10 after reducing stair climbing for two weeks. Please update the current concern and timeline.
@@ -33,21 +34,39 @@ Prepare for an appointment:
 Please turn Karan's current dossier into a concise appointment note and the top questions for his doctor.
 ```
 
-Ask about possible explanations:
+Ask for possible explanations:
 
 ```text
 Based on the dossier, build ranked possibilities for the fatigue. Separate facts, assumptions, missing data, and next questions.
 ```
 
-## Good answers
+## How to answer well
 
-When answering the agent, include:
+When the agent asks you something, the most useful answers include:
 
 - Dates, even approximate ones.
 - Symptom severity from 0 to 10.
 - Whether a symptom is new, worsening, improving, recurring, or resolved.
 - Medicine names, doses, timing, start dates, and reasons.
-- What helped, what did not help, and what caused side effects.
-- Source of the information, such as memory, doctor advice, prescription, lab report, or home measurement.
+- What helped, what didn't, and what caused side effects.
+- Where the information came from — memory, doctor advice, a prescription, a lab report, or a home measurement.
 
-Short factual answers are better than long uncertain stories. If you are unsure, say what is uncertain.
+Short, factual answers beat long, uncertain stories. If you're not sure, say what's uncertain.
+
+## Be accurate
+
+Accuracy matters more than polish. A short note with real dates and honest uncertainty is worth far more than a confident but vague summary.
+
+Use exact dates when you have them:
+
+```text
+Started metformin on 2026-05-03.
+```
+
+And when you don't, say so plainly:
+
+```text
+Started sometime in early May 2026. Exact date unknown.
+```
+
+The agent would rather record "unknown" than guess.

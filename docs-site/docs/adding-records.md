@@ -1,13 +1,14 @@
 ---
-title: Adding Records
-description: How users should add records to OpenCareLoop.
+title: Add your records
+sidebar_label: Add your records
+description: Where to put records so the agent can read them.
 ---
 
-# Adding Records
+# Add your records
 
-Add records when they can clarify dates, results, medicines, diagnoses, doctor advice, or what happened during a visit.
+Add a record whenever it can pin down a date, a result, a medicine, a diagnosis, doctor advice, or what happened at a visit.
 
-Useful records include:
+Records that help:
 
 - Lab reports with units and reference ranges.
 - Prescriptions and pharmacy labels.
@@ -19,18 +20,18 @@ Useful records include:
 - Symptom logs.
 - Home measurements.
 
-## Where to put new files
+## Where files go
 
-Place new files for a person in:
+Drop new files for a person into their intake folder:
 
 ```text
 people/<person-slug>/raw-data-dump/
 ```
 
-Then tell the agent what you added:
+The `<person-slug>` is just that person's folder name, like `karan`. Then tell the agent what you added:
 
 ```text
 I added Karan's blood test report from 2026-06-12 to his raw-data-dump. Please classify it and update the dossier after review.
 ```
 
-The agent will go through the documents in small batches and ask clarifying questions.
+The agent works through documents in small batches, reads each one carefully, and asks whenever something is unclear. Your original files are never overwritten — it keeps them and builds its notes alongside.

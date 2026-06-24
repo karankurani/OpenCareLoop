@@ -1,28 +1,31 @@
 ---
-title: What OpenCareLoop Is
-description: A user-facing overview of OpenCareLoop.
+title: What OpenCareLoop is
+sidebar_label: What OpenCareLoop is
+description: What OpenCareLoop is, how the loop works, and who it's for.
 ---
 
-# What OpenCareLoop Is
+# What OpenCareLoop is
 
-OpenCareLoop is a AI agent loop for managing your own health. It factors in everything in your life to give you personlalized questions for your doctor or lifestyle changes.
+OpenCareLoop is an AI agent that helps you and your family get to the bottom of long-running health issues. You keep everything — symptoms, medicines, records, doctor advice, lifestyle — in one private dossier, and the agent works the problem with you, one change at a time.
 
-The basic idea is simple:
+It runs locally, on your own device. The only ones in the loop are you and the agent.
 
-1. Keep each person's health information in their own dossier.
-2. Add symptoms, medicines, records, doctor advice, food, lifestyle changes with dates. The AI agent will organize the information into timelines, summaries, and questions.
-3. Ask AI Agent for solution or some change to do. It will suggest a change.
-4. Return over time as new information arrives. And tell what worked, what did not work etc. Be honest in this. It is only you and the AI agent working on your device locally.
+## How the loop works
 
-OpenCareLoop works better when the information is specific: exact dates, medicine names, doses, lab values with units, what changed, what helped, and what did not help.
+1. **Pour in your data.** Records, symptoms, medicines, lifestyle. The more the agent knows, the sharper it gets.
+2. **Say what's wrong.** The concern you actually want solved — the fatigue, the pain, the number that won't move.
+3. **Get one next step.** The agent suggests a single change to test or treat it — something to try, track, or take to your doctor.
+4. **See what happened.** Do it (with your doctor where it matters), then tell the agent the result, honestly.
+5. **Loop toward better.** Each round rules things in or out and sharpens the picture, until you find what actually helps.
 
-IMPORTANT
-It is not for urgent or emergency situations. It is also not a replacement for a doctor, pharmacist, nurse, emergency service, or local care pathway.
+The loop gets smarter the more specific you are: exact dates, medicine names and doses, lab values with units, what changed, what helped, and what didn't.
 
-## Who it is for
+## Who it's for
 
-OpenCareLoop is to help when a heatlh problem has many pieces spread across visits, prescriptions, lab reports, imaging reports, symptoms, and lifestyle changes. It is especailly useful in understanding (and in some cases managing better) long term chronic issues that people face.
+OpenCareLoop is built for the health problems that have too many pieces to hold in your head — spread across visits, prescriptions, lab reports, imaging, symptoms, and lifestyle changes. It's especially useful for long-term, chronic issues that play out over months and years.
 
-It is especially useful when the question is not "what should I do this minute?" but "what has been happening over time, what information is missing, and what should we ask at the next appointment?"
+It shines when the question isn't "what do I do this second?" but "what has been happening over time, what's missing, and what should we ask at the next appointment?" Unlike a rushed visit, the agent has effectively unlimited patience and time to sit with your data.
 
-It has ~infinite patience and time to analyze your data as opposed to a human who is frequently rushed.
+:::warning Not for emergencies
+OpenCareLoop is for non-urgent care only. It is **not** a replacement for a doctor, pharmacist, nurse, or emergency service. If something is sudden, severe, or dangerous, stop and get medical help. See [When not to use it](./non-urgent-use.md).
+:::

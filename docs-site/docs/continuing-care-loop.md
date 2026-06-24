@@ -1,48 +1,58 @@
 ---
-title: Continuing The Care Loop
-description: Return to an existing dossier without restarting intake.
+title: The care loop
+sidebar_label: The care loop
+description: Come back when something changes and keep the dossier sharp.
 ---
 
-# Continuing The Care Loop
+# The care loop
 
-OpenCareLoop is most useful when you return after something changes. A change can be a new symptom, a symptom getting better or worse, a medication change, a new test result, a doctor visit, or a new record.
+OpenCareLoop pays off when you come back. Every time something changes — a new symptom, a symptom getting better or worse, a medication change, a test result, a doctor visit, a new record — that's a reason to loop.
 
 ## Start with a resync
 
-When returning to a person, ask the agent to resync first:
+When you return, ask the agent to catch up first:
 
 ```text
 This is for Karan. Please resync from his current dossier, then ask what changed.
 ```
 
-The agent will briefly summarize:
+It gives you a quick status:
 
 - Active concerns.
 - Current medicines.
 - Latest dated events.
 - Open questions.
-- Missing or stale information.
+- Anything missing or out of date.
 
-Then it will ask a small batch of follow-up questions.
+Then it asks a small batch of follow-up questions.
 
-## Useful updates to give
+## What's worth reporting
 
-Try to describe what changed since the last dated entry:
+Focus on what changed since the last entry:
 
-- New, worsening, improving, recurring, or resolved symptoms.
-- Medicine starts, stops, dose changes, timing changes, or side effects.
+- Symptoms that are new, worsening, improving, recurring, or resolved.
+- Medicine starts, stops, dose or timing changes, and side effects.
 - New doctor advice.
 - New lab, imaging, prescription, discharge, or visit records.
-- Home measurements such as blood pressure, pulse, temperature, glucose, weight, or oxygen saturation.
-- Major sleep, stress, travel, infection, injury, diet, or activity changes.
+- Home measurements — blood pressure, pulse, temperature, glucose, weight, oxygen.
+- Big shifts in sleep, stress, travel, infection, injury, diet, or activity.
+
+## Prepare for an appointment
+
+Before a visit, turn the dossier into something you can hand over:
+
+```text
+Please prepare a concise appointment note from Karan's dossier. Include the main concern, a brief timeline, current medicines and recent changes, relevant test results, what's been tried, and the top questions for the doctor.
+```
+
+A good note helps the clinician see the reason for the visit, what's already been tried, what helped or made things worse, and the questions that matter most. Right after the appointment, do a quick brain-dump while it's fresh — the agent folds it back into the timeline.
 
 ## End each session cleanly
 
-Before stopping, ask the agent to summarize:
+Before you stop, ask for a wrap-up:
 
-- What changed in the dossier.
-- What remains uncertain.
-- What records or answers are needed next.
-- Which questions should go to the doctor.
+```text
+Summarize what changed, what's still uncertain, what records or answers are needed next, and which questions should go to the doctor.
+```
 
-This makes the next session easier to resume.
+That makes the next loop easy to pick up.

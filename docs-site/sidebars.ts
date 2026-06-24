@@ -2,14 +2,18 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
   mainSidebar: [
-    'intro',
-    'non-urgent-use',
-    'getting-started',
-    'continuing-care-loop',
-    'adding-records',
-    'talking-to-the-agent',
-    'preparing-for-appointments',
-    'keeping-information-accurate',
+    {
+      type: 'category',
+      label: 'Start here',
+      collapsed: false,
+      items: ['intro', 'non-urgent-use', 'setup', 'getting-started'],
+    },
+    {
+      type: 'category',
+      label: 'Using the loop',
+      collapsed: false,
+      items: ['continuing-care-loop', 'adding-records', 'talking-to-the-agent'],
+    },
   ],
 };
 

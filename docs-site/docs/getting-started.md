@@ -1,50 +1,53 @@
 ---
-title: Getting Started
-description: Start a new OpenCareLoop dossier.
+title: Start your first dossier
+sidebar_label: Start your first dossier
+description: Open a dossier and give the agent enough to build on.
 ---
 
-# Getting Started
+# Start your first dossier
 
-Start with one person and one clear reason for opening the dossier. The first session does not need to capture everything. It should create enough structure that future sessions can build on it.
+Start with one person and one clear reason for opening the dossier. The first session doesn't need to capture everything — it just needs enough structure for future sessions to build on.
 
-## First message to the agent
+## Your first message
 
-Use a simple prompt like:
+Tell the agent who this is for:
 
 ```text
 This is for Karan. Let's start a new OpenCareLoop dossier for him.
 ```
 
-If the person already has a folder in the workspace, say that instead:
+If that person already has a folder, resume instead of starting over:
 
 ```text
 This is for Karan. Please resume his existing dossier before asking new questions.
 ```
 
-## What to answer first
+## What to have ready
 
-Expect the agent to ask in small batches. Good first answers include:
+The agent asks in small batches, so you can answer as you go. Helpful first answers:
 
 - Age or date of birth.
 - Height and current weight, if known.
 - City and country.
 - Preferred language for notes.
-- Main current concern in the person's own words.
-- When the concern started.
+- The main concern, in the person's own words.
+- When it started.
 - Current medicines, doses, and timing.
 - Allergies or bad reactions.
 - Known diagnoses, surgeries, hospitalizations, or major illnesses.
 
-It is fine to say "unknown" or "I need to check." Missing information should be marked as missing, not guessed.
+:::tip "Unknown" is a real answer
+It's fine to say "unknown" or "I need to check." The agent marks missing information as missing — it won't guess, and it won't fill gaps with assumptions.
+:::
 
-## What the first dossier should contain
+## What you'll have after
 
-After initial intake, the dossier should have:
+By the end of the first session, the dossier holds:
 
 - A short profile.
 - Current concerns.
 - A dated timeline.
-- Current medicines and important past medicines.
+- Current medicines, plus important past ones.
 - Questions to ask the doctor.
 
-Keep the first version concise. The dossier becomes more valuable as it is updated with better dates, records, and follow-up answers.
+Keep this first version short. It gets more valuable every time you come back with better dates, records, and answers — that's [the loop](./continuing-care-loop.md).
