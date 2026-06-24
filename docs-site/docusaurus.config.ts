@@ -11,6 +11,8 @@ const config: Config = {
     projectName: "OpenCareLoop",
     trailingSlash: false,
 
+    favicon: "img/favicon.svg",
+
     onBrokenLinks: "throw",
     markdown: {
         hooks: {
@@ -47,6 +49,12 @@ const config: Config = {
         },
         navbar: {
             title: "OpenCareLoop",
+            logo: {
+                alt: "OpenCareLoop",
+                src: "img/logomark.svg",
+                width: 28,
+                height: 28,
+            },
             items: [
                 {
                     type: "docSidebar",

@@ -83,6 +83,24 @@
     --ifm-button-border-color: #00732a;
 }
 
+.docsDownloadButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 20px;
+}
+
+.docsDownloadButtonIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.docsDownloadButtonIcon svg {
+    width: 18px;
+    height: 18px;
+}
+
 /* ─── Homepage ─── */
 
 /* Navbar override when on homepage */
@@ -94,6 +112,10 @@ html.home-page .navbar {
 
 html.home-page .navbar__title {
     color: #FFFFFF;
+}
+
+html.home-page .navbar__logo img {
+    filter: brightness(0) invert(1);
 }
 
 html.home-page .navbar__link {
@@ -135,6 +157,26 @@ html.home-page .navbar__search-input {
     padding: clamp(56px, 9vw, 86px) 0 clamp(40px, 6vw, 56px);
 }
 
+.homeLogomark {
+    display: flex;
+    justify-content: center;
+    margin-bottom: clamp(20px, 3vw, 32px);
+}
+
+/* animated bead visible by default; static bead hidden */
+.homeLogomark .oclBeadStatic {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .homeLogomark .oclBeadAnim {
+        display: none;
+    }
+    .homeLogomark .oclBeadStatic {
+        display: block;
+    }
+}
+
 .homeEyebrow {
     font-family: var(--ifm-font-family-base);
     font-size: 12px;
@@ -153,6 +195,34 @@ html.home-page .navbar__search-input {
     margin: 0 auto 22px;
     color: #FFFFFF;
     max-width: 840px;
+}
+
+.homeAlphaBanner {
+    max-width: 700px;
+    margin: 0 auto 28px;
+    padding: 14px 16px;
+    border: 1px solid rgba(191, 240, 206, 0.24);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+.homeAlphaBadge {
+    display: inline-block;
+    font-family: var(--ifm-font-family-base);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #D7F8E2;
+    margin-bottom: 8px;
+}
+
+.homeAlphaText {
+    font-family: var(--ifm-font-family-base);
+    font-size: 13px;
+    line-height: 1.7;
+    color: #DDEFE3;
+    margin: 0;
 }
 
 .homeSubtitle {
@@ -189,6 +259,15 @@ html.home-page .navbar__search-input {
     text-decoration: none;
 }
 
+.homeDownloadNote {
+    margin: 14px auto 0;
+    max-width: 420px;
+    font-family: var(--ifm-font-family-base);
+    font-size: 12px;
+    line-height: 1.7;
+    color: #C2E2CC;
+}
+
 /* Sections */
 .homeSection {
     padding: clamp(8px, 2vw, 16px) 0 clamp(56px, 8vw, 80px);
@@ -220,6 +299,22 @@ html.home-page .navbar__search-input {
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #BFF0CE;
+}
+
+.theme-admonition [class^="admonitionHeading_"],
+.theme-admonition [class*=" admonitionHeading_"] {
+    font-family: var(--ifm-font-family-base);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.theme-admonition [class^="admonitionHeading_"] > *,
+.theme-admonition [class*=" admonitionHeading_"] > * {
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
 }
 
 /* Loop stepper */

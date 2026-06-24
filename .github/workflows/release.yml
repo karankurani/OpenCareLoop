@@ -1,4 +1,4 @@
-name: Release zip
+name: Release alpha zip
 
 on:
   push:
@@ -41,6 +41,12 @@ jobs:
         if: github.event_name == 'push'
         uses: softprops/action-gh-release@v2
         with:
+          name: OpenCareLoop ${{ github.ref_name }} (Alpha)
+          prerelease: true
+          body: |
+            Alpha release: use carefully and review all outputs before acting on them.
+
+            OpenCareLoop is early-stage software for non-urgent use. Expect rough edges, incomplete workflows, and mistakes. Do not rely on it for urgent, time-sensitive, or high-risk medical decisions.
           files: |
             ${{ env.VERSIONED_ZIP }}
             ${{ env.STABLE_ZIP }}
