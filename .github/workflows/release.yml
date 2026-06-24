@@ -25,6 +25,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify docs alpha version matches release tag
+        if: github.event_name == 'push'
+        run: |
+          expected="export const CURRENT_ALPHA_VERSION = '${VERSION}';"
+          if ! grep -F "$expected" docs-site/src/data/release.ts > /dev/null; then
+            echo "docs-site/src/data/release.ts must be bumped to ${VERSION} before tagging a release."
+            exit 1
+          fi
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:

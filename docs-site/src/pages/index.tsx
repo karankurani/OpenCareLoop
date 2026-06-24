@@ -1,9 +1,7 @@
 import { Fragment, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-
-const RELEASE_DOWNLOAD_URL =
-  'https://github.com/karankurani/OpenCareLoop/releases/latest/download/OpenCareLoop.zip';
+import { RELEASE_DOWNLOAD_URL } from '../data/release';
 
 const LOOP_STEPS = [
   {

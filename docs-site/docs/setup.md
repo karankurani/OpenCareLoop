@@ -5,6 +5,7 @@ description: Get OpenCareLoop running on your device in three steps.
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { RELEASE_DOWNLOAD_URL } from '@site/src/data/release';
 
 # Set up your workspace
 
@@ -22,7 +23,7 @@ OpenCareLoop helps you organize your health and ask better questions. It is **no
 
 Download or unzip the `OpenCareLoop` folder and put it somewhere easy to find on your computer. Everything — your dossiers and any records you add — stays inside this folder, on your device.
 
-<a className="button button--primary button--md docsDownloadButton" href="https://github.com/karankurani/OpenCareLoop/releases/latest/download/OpenCareLoop.zip">
+<a className="button button--primary button--md docsDownloadButton" href={RELEASE_DOWNLOAD_URL}>
   <span className="docsDownloadButtonIcon" aria-hidden="true">
     <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M10 3.5V11.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
