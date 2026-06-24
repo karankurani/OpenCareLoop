@@ -6,11 +6,7 @@ It is designed for non-urgent use: organizing symptoms, medicines, records, time
 
 ## User Guide
 
-The user-facing documentation lives in the Docusaurus site under [`docs-site/`](docs-site/).
-
-When published with GitHub Pages, it will be available at:
-
-https://karankurani.github.io/OpenCareLoop/
+You can get started [here](https://karankurani.github.io/OpenCareLoop/).
 
 ## Privacy
 
