@@ -36,3 +36,20 @@ If person folders exist, identify likely relevant slugs from the user's request.
 For an existing person, read that person's `AGENTS.md` and concise dossier files
 before analysis or updates.
 
+## Updating OpenCareLoop
+
+The installed version is recorded in the root `VERSION` file. To update the
+tooling (root docs and `skills/`) to the latest published release without
+touching any `people/` data, use `skills/opencareloop-update`:
+
+```sh
+# Preview what would change
+python3 skills/opencareloop-update/scripts/update_opencareloop.py --dry-run
+
+# Apply
+python3 skills/opencareloop-update/scripts/update_opencareloop.py
+```
+
+If `requirements.txt` changed, rebuild the environment with
+`.venv/bin/python -m pip install -r requirements.txt`.
+

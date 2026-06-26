@@ -10,49 +10,11 @@ import stat
 import sys
 import zipfile
 
-
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "skills" / "opencareloop-update"))
+from release_manifest import BLOCKED_SUFFIXES, FORBIDDEN_PARTS, ROOT_FILES, SKILL_FILE_SUFFIXES  # noqa: E402
 DIST = ROOT / "dist"
 PACKAGE_ROOT = "OpenCareLoop"
-
-ROOT_FILES = [
-    "README.md",
-    "START_HERE.md",
-    "AGENTS.md",
-    "CLAUDE.md",
-    "SETUP.md",
-    "LICENSE",
-    "requirements.txt",
-]
-
-SKILL_FILE_SUFFIXES = {".md", ".py", ".yaml", ".yml"}
-BLOCKED_SUFFIXES = {
-    ".db",
-    ".doc",
-    ".docx",
-    ".gif",
-    ".heic",
-    ".jpeg",
-    ".jpg",
-    ".pdf",
-    ".png",
-    ".sqlite",
-    ".tif",
-    ".tiff",
-    ".webp",
-    ".xls",
-    ".xlsx",
-}
-BLOCKED_PARTS = {
-    ".git",
-    ".github",
-    ".venv",
-    "docs-site",
-    "node_modules",
-    "people",
-    "raw-data-dump",
-    "__pycache__",
-}
 
 
 def parse_args() -> argparse.Namespace:
@@ -98,7 +60,7 @@ def assert_safe_path(path: Path) -> None:
     parts = set(rel.parts)
     suffix = path.suffix.lower()
 
-    if parts & BLOCKED_PARTS:
+    if parts & FORBIDDEN_PARTS:
         raise SystemExit(f"Blocked release path selected: {rel}")
     if suffix in BLOCKED_SUFFIXES:
         raise SystemExit(f"Sensitive or binary file selected: {rel}")
@@ -125,6 +87,10 @@ def build_zip(version: str) -> Path:
         zf.writestr(zip_info(f"{PACKAGE_ROOT}/people", is_dir=True), "")
         zf.writestr(zip_info(f"{PACKAGE_ROOT}/people/.gitkeep"), "")
 
+        # Stamp the release version so the in-place updater can compare against
+        # the latest published release.
+        zf.writestr(zip_info(f"{PACKAGE_ROOT}/VERSION"), f"{version}\n")
+
         for path in release_files:
             rel = path.relative_to(ROOT).as_posix()
             arcname = f"{PACKAGE_ROOT}/{rel}"
@@ -143,4 +109,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-

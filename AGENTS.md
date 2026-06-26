@@ -175,6 +175,10 @@ When the user asks what they should change or do:
 - `skills/dossier-sync` is optional for ordinary manual dossier updates; the
   dossier may also be updated directly in separate intake, analysis, or
   follow-up sessions.
+- Use `skills/opencareloop-update` to update the workspace tooling (root docs
+  and `skills/`) to the latest published release. It never touches `people/`,
+  `.venv/`, or any dossier data. Use it when the user asks to update, upgrade,
+  or check the version of OpenCareLoop.
 - New records should enter through `people/<person-slug>/raw-data-dump/`.
 - Sort raw files into the matching person-local subfolders before structured
   ingestion.

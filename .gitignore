@@ -6,6 +6,9 @@ __MACOSX/
 *.swp
 *.swo
 
+# Agent / browser tooling artifacts
+.playwright-mcp/
+
 # Python
 .venv/
 __pycache__/
