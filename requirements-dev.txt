@@ -1,0 +1,5 @@
+# Developer/test dependencies. Not shipped in release zips and not required to
+# run the workspace tooling. Install with:
+#   .venv/bin/python -m pip install -r requirements-dev.txt
+-r requirements.txt
+pytest
